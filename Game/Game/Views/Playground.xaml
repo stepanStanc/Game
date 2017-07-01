@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Game.Playground">
+  <Grid  BackgroundColor="#76FF03" x:Name="plgLay">
+    
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="4*"/>
+      <RowDefinition Height="2*"/>
+    </Grid.RowDefinitions>
+
+        <Label Text="100" BindingContext="{x:Reference Name=question}" HeightRequest="150" WidthRequest="150" x:Name="timeC" HorizontalOptions="Start" TextColor="{Binding Path=TextColor}" FontSize="Large" FontAttributes="Bold" Margin="10" Grid.Row="0" />
+        <Button Text="❚❚" BindingContext="{x:Reference Name=question}" x:Name="pause" HorizontalOptions="End" TextColor="{Binding Path=TextColor}" FontSize="20"  Grid.Row="0"  HeightRequest="60" WidthRequest="100"   BackgroundColor="Transparent" BorderColor="{Binding Path=TextColor}" BorderWidth="5"  />
+
+    <Label Text="Some question" x:Name="question" FontSize="20" FontAttributes="Bold" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="#0091EA"  Grid.Row="1" />
+
+    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" x:Name="pauseMenu" Grid.Row="1" >
+      <Button Text="Reset" FontSize="Large" x:Name="reset" Opacity="1" BindingContext="{x:Reference Name=question}" FontAttributes="Bold" TextColor="{Binding Path=TextColor}" BackgroundColor="Transparent" BorderColor="{Binding Path=TextColor}" BorderWidth="5" HeightRequest="90" Grid.Row="1" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" IsEnabled="False" IsVisible="False"  />
+      <Button Text="Menu" FontSize="Large" x:Name="menu" Opacity="1" BindingContext="{x:Reference Name=question}" FontAttributes="Bold" TextColor="{Binding Path=TextColor}" BackgroundColor="Transparent" BorderColor="{Binding Path=TextColor}" BorderWidth="5" HeightRequest="90" Grid.Row="1" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" IsEnabled="False" IsVisible="False" />
+      <Label Text="Score:" BindingContext="{x:Reference Name=question}" x:Name="cScore" Grid.Row="1" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" IsEnabled="False" IsVisible="False" TextColor="{Binding Path=TextColor}" FontSize="25" Margin="10" />
+    </StackLayout>
+
+    <Grid Grid.Row="2">
+      
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+      </Grid.ColumnDefinitions>
+
+      <Button Text="Correct!" FontSize="Large" x:Name="correct" Opacity="1" BindingContext="{x:Reference Name=question}" FontAttributes="Bold" TextColor="{Binding Path=TextColor}" BackgroundColor="Transparent" BorderColor="{Binding Path=TextColor}" BorderWidth="5" HeightRequest="150" WidthRequest="150" Grid.Column="0"  />
+      <Button Text="Incorrect!" FontSize="Large" x:Name="incorrect" Opacity="1" BindingContext="{x:Reference Name=correct}" FontAttributes="Bold" TextColor="{Binding Path=TextColor}" BackgroundColor="Transparent" BorderColor="{Binding Path=TextColor}" BorderWidth="5" HeightRequest="150" WidthRequest="150"  Grid.Column="1" IsEnabled="{Binding Path=IsEnabled}" IsVisible="{Binding Path=IsVisible}"   />
+      
+    </Grid>
+    
+  </Grid>
+  
+</ContentPage>

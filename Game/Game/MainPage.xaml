@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Game"
+             x:Class="Game.MainPage">
+  <StackLayout BackgroundColor="#00E676">
+    <StackLayout VerticalOptions="CenterAndExpand">
+      <Label Text="Game" HorizontalOptions="Center" TextColor="#C54C68" FontSize="90" FontAttributes="Bold" VerticalOptions="CenterAndExpand"/>
+      <Label x:Name="scores" Text="Hight scores" HorizontalOptions="Center" TextColor="#9D3EDF" FontSize="23" VerticalOptions="CenterAndExpand" FontAttributes="Bold" Margin="20"/>
+      <Button x:Name="play" Text="▶" FontSize="Large" HorizontalOptions="Center" TextColor="White" BackgroundColor="Red" BorderWidth="5" HeightRequest="70" WidthRequest="70" BorderRadius="10000" BorderColor="White" VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+  </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Game.Outro">
+    <Grid BackgroundColor="#00E676">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="4*"/>
+      </Grid.RowDefinitions>
+      <Label x:Name="myScore" TextColor="#C54C68"  HorizontalOptions="Start" FontSize="Large" FontAttributes="Bold" Margin="10" Grid.Row="0"/>
+      <Label Text="Menu" x:Name="toMenu" HorizontalOptions="End" TextColor="#C54C68" FontSize="Large" FontAttributes="Bold" Margin="10" Grid.Row="0"/>
+      <StackLayout VerticalOptions="CenterAndExpand" Grid.Row="1">
+        <Entry Placeholder="Player name" x:Name="plrName" HorizontalOptions="Center" TextColor="#C54C68" FontSize="40" FontAttributes="Bold" VerticalOptions="CenterAndExpand"/>
+        <Button Text="Save" x:Name="saveBtn" Opacity="1" FontAttributes="Bold" TextColor="#C54C68" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand" Margin="20" VerticalOptions="CenterAndExpand" BorderWidth="5" WidthRequest="250" HeightRequest="100"  />
+    </StackLayout>
+  </Grid>
+</ContentPage>

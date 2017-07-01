@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Game.Intro">
+  <StackLayout BackgroundColor="#00E676" x:Name="stack">
+        <Label Text="Decide before the time runs out" x:Name="iText"  FontSize="70" Margin="10" FontAttributes="Bold" TextColor="#C54C68"/>
+  </StackLayout>
+</ContentPage>

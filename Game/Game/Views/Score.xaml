@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Game.Score">
+  <StackLayout BackgroundColor="#00E676" x:Name="scoresPg">
+    <Label Text="Menu" x:Name="toMenu" HorizontalOptions="End" TextColor="#C54C68" FontSize="Large" FontAttributes="Bold" Margin="10"/>
+    <StackLayout Orientation="Vertical" Margin="50,5,50,5">
+      <StackLayout Orientation="Horizontal">
+        <Label Text="Name" FontAttributes="Bold" TextColor="White" FontSize="20" />
+        <Label Text="Score" FontAttributes="Bold" TextColor="White" FontSize="20" HorizontalOptions="EndAndExpand"/>
+      </StackLayout>
+    </StackLayout>
+    <ListView x:Name="scoreList" SeparatorVisibility="None">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Orientation="Vertical" Margin="50,5,50,5">
+              <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding Name}" TextColor="#C54C68" FontAttributes="Bold" />
+                <Label Text="{Binding Score}" TextColor="#C54C68" FontAttributes="Bold"
+                                HorizontalOptions="EndAndExpand" MinimumWidthRequest="40"/>
+              </StackLayout>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>
